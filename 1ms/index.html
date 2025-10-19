@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>setInterval(1) Deneyi – Webci Yasin</title>
+    <style>
+      body {
+        background: #0f172a;
+        color: #e2e8f0;
+        font-family: "Inter", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        gap: 10px;
+      }
+
+      .chart-container {
+        width: 800px;
+        height: 200px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        background: #1e293b;
+        border-radius: 12px;
+        padding: 8px;
+        box-shadow: 0 0 20px rgba(0, 255, 157, 0.15);
+      }
+
+      canvas {
+        width: 1600px;
+        height: 200px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+        color: #38bdf8;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🔥 setInterval(1) Gerçekten 1ms mi?</h1>
+    <div class="chart-container">
+      <canvas id="chart"></canvas>
+    </div>
+
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
