@@ -1,0 +1,26 @@
+{
+  "name": "wasmtest",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "asbuild:debug": "asc assembly/index.ts --target debug",
+    "asbuild:release": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "test": "node tests",
+    "start": "npx serve ."
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.28.9",
+    "vite": "^7.1.7"
+  },
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  }
+}
