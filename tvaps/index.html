@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tvaps</title>
+  </head>
+  <style>
+
+    body {
+  background: #111;
+  color: white;
+  font-family: sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+#app {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  height: 100vh;
+}
+#channel-list {
+  width: 250px;
+  overflow-y: auto;
+  background: #1f1f1f;
+  border-right: 1px solid #333;
+}
+#channel-list div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+#channel-list div:hover {
+  background: #333;
+}
+#channel-list img {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+#player-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+video {
+  width: 90%;
+  max-height: 80vh;
+  background: black;
+  border-radius: 10px;
+}
+
+  </style>
+  <body>
+<div id="app">
+      <div id="channel-list"></div>
+      <div id="player-container">
+        <h2 id="channel-title"></h2>
+        <video id="player" controls autoplay></video>
+      </div>
+    </div>
+<h2 id="channel-title"></h2>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
